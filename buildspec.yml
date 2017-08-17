@@ -15,7 +15,7 @@ phases:
             - ng build --env=${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp dist s3://${S3_BUCKET} --region us-east-2
+            - aws s3 cp dist s3://casesetuppoc --region us-east-2
             - echo Build completed on `date`
 artifacts:
     files:
