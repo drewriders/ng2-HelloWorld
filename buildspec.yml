@@ -15,7 +15,7 @@ phases:
             - ng build --env=${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp s3://xpcasesetuppoc.com . --recursive
+            - aws s3 cp s3://xpcasesetuppoc.com . --recursive --region us-east-2
             - echo Build completed on `date`
 artifacts:
     files:
